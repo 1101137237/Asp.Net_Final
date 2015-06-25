@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KuasCore.Models
 {
-    public class Course
+    public class Employee
     {
         public string Id { get; set; }
 
@@ -16,7 +16,7 @@ namespace KuasCore.Models
 
         public override string ToString()
         {
-            return "Course: Id = " + Id + ", Name = " + Name + ".";
+            return "Employee: Id = " + Id + ", Name = " + Name + ".";
         }
     }
 }

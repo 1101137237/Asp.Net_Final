@@ -150,11 +150,31 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\Course.html" />
+    <Content Include="Views\style\js\jquery.min.js" />
+    <Content Include="Views\style\js\kendo.all.min.js" />
+    <Content Include="Views\style\kendo.common-material.min.css" />
+    <Content Include="Views\style\kendo.dataviz.material.min.css" />
+    <Content Include="Views\style\kendo.dataviz.min.css" />
+    <Content Include="Views\style\kendo.material.min.css" />
+    <Content Include="Views\style\Material\editor.png" />
+    <Content Include="Views\style\Material\imagebrowser.png" />
+    <Content Include="Views\style\Material\indeterminate.gif" />
+    <Content Include="Views\style\Material\loading-image.gif" />
+    <Content Include="Views\style\Material\loading.gif" />
+    <Content Include="Views\style\Material\loading_2x.gif" />
+    <Content Include="Views\style\Material\markers.png" />
+    <Content Include="Views\style\Material\markers_2x.png" />
+    <Content Include="Views\style\Material\slider-h.gif" />
+    <Content Include="Views\style\Material\slider-v.gif" />
+    <Content Include="Views\style\Material\sprite.png" />
+    <Content Include="Views\style\Material\sprite_2x.png" />
+    <Content Include="Views\style\Material\sprite_kpi.png" />
+    <Content Include="Views\style\Material\sprite_kpi_2x.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
