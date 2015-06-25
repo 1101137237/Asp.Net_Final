@@ -8,7 +8,6 @@ namespace KuasCore.Models
 {
     public class Employee
     {
-        public string PKId { get; set; }
 
         public string Id { get; set; }  //Employee_ID
 
