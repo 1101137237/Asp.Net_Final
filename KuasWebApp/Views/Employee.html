@@ -61,7 +61,7 @@
                             fields: {
                             Id  : { type: "int", editable: false, nullable: false },
                             Name: { type: "string", validation: { required: true }, editable: true, nullable: false },
-                            Department: { type: "string", editable: true, filterable: { multi: true } },
+                            Department: { type: "string", editable: true },
                             Description : { type: "string", editable: true }
                             }
                         }
@@ -74,16 +74,18 @@
                 sortable: true,
                 filterable: true,
                 editable: "inline",
-                toolbar: [{ name: "create", text:"新增員工資料"}],
+                toolbar: [{ name: "create", text: "新增員工資料" }],
+                selectable: "multiple",
                 pageable: {
                     input: true,
                     numeric: false
                 },
                 columns: [
-                    { field: "Id"  , title: "員工編號" , width: "100px" },
-                    { field: "Name", title: "員工名稱", width: "100px" },
-                    { field: "Department", title: "員工部門", width: "100px" },
-                    { field: "Description", title: "員工描述", width: "160px" },
+                    { field: "Id", title: "員工編號", width: "100px", filterable: false },
+                    {
+                        field: "Name", title: "員工名稱", width: "100px"},
+                    { field: "Department", title: "員工部門", width: "100px", filterable: { multi: true } },
+                    { field: "Description", title: "員工描述", width: "160px",filterable:false },
                     {
                         command: [
                             { name: "edit", id:"comedit" , text: "確認修改" },
