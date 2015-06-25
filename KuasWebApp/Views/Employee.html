@@ -56,8 +56,9 @@
                             id: "Id",
                             fields: {
                             Id  : { type: "int", editable: false, nullable: false },
-                            Name: { type: "string", validation: { required: true}, editable: true, nullable: false },
-                                Description : { type: "string", editable: true }
+                            Name: { type: "string", validation: { required: true }, editable: true, nullable: false },
+                            Department: { type: "string", editable: true },
+                            Description : { type: "string", editable: true }
                             }
                         }
                     }
@@ -77,6 +78,7 @@
                 columns: [
                     { field: "Id"  , title: "員工編號" , width: "100px" },
                     { field: "Name", title: "員工名稱", width: "100px" },
+                    { field: "Department", title: "員工部門", width: "100px" },
                     { field: "Description", title: "員工描述", width: "160px" },
                     {
                         command: [

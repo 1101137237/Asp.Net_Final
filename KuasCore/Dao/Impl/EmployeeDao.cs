@@ -21,10 +21,11 @@ namespace KuasCore.Dao.Impl
 
         public void AddEmployee(Employee Employee) 
         {
-            string command = @"INSERT INTO Employee (Employee_Name, Employee_Description) VALUES (@Name, @Description);";
+            string command = @"INSERT INTO Employee (Employee_Name, Employee_Department, Employee_Description) VALUES (@Name, @Department, @Description);";
 
             IDbParameters parameters = CreateDbParameters();
             parameters.Add("Name", DbType.String).Value = Employee.Name;
+            parameters.Add("Department", DbType.String).Value = Employee.Department;
             parameters.Add("Description", DbType.String).Value = Employee.Description;
 
             ExecuteNonQuery(command, parameters);
@@ -32,11 +33,12 @@ namespace KuasCore.Dao.Impl
 
         public void UpdateEmployee(Employee Employee)
         {
-            string command = @"UPDATE Employee SET Employee_Name = @Name, Employee_Description = @Description WHERE Employee_Id = @Id;";
+            string command = @"UPDATE Employee SET Employee_Name = @Name, Employee_Department = @Department, Employee_Description = @Description WHERE Employee_Id = @Id;";
 
             IDbParameters parameters = CreateDbParameters();
             parameters.Add("Id", DbType.Int32).Value = Employee.Id;
             parameters.Add("Name", DbType.String).Value = Employee.Name;
+            parameters.Add("Department", DbType.String).Value = Employee.Department;
             parameters.Add("Description", DbType.String).Value = Employee.Description;
 
             ExecuteNonQuery(command, parameters);

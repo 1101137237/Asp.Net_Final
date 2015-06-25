@@ -17,6 +17,7 @@ namespace KuasCore.Dao.Mapper
 
             target.Id = dataReader.GetInt32(dataReader.GetOrdinal("Employee_Id"));
             target.Name = dataReader.GetString(dataReader.GetOrdinal("Employee_Name"));
+            target.Department = dataReader.GetString(dataReader.GetOrdinal("Employee_Department"));
             target.Description = dataReader.GetString(dataReader.GetOrdinal("Employee_Description"));
 
             return target;
