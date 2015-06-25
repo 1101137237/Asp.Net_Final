@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace KuasWebApp.Controllers
 {
-    public class CourseController : ApiController
+    public class CourseController : ApiController 
     {
 
         public ICourseService CourseService { get; set; }
