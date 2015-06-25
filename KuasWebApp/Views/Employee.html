@@ -15,8 +15,12 @@
 
     <div class="content-pane">
         <div id="grid"></div>
+        <div id="details"></div>
     </div>
     <script>
+
+        var wnd,
+            detailsTemplate;
         $(document).ready(function () {
             var UrlBase = "/";
             $("#grid").kendoGrid({
