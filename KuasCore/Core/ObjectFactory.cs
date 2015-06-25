@@ -4,7 +4,7 @@ using Spring.Context.Support;
 
 namespace Core
 {
-    public class ObjectFactory
+    public class ObjectFactory 
     {
 
         public static IApplicationContext GetApplicationContext()
