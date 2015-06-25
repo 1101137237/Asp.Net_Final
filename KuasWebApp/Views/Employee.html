@@ -61,7 +61,7 @@
                             fields: {
                             Id  : { type: "int", editable: false, nullable: false },
                             Name: { type: "string", validation: { required: true }, editable: true, nullable: false },
-                            Department: { type: "string", editable: true },
+                            Department: { type: "string", editable: true, filterable: { multi: true } },
                             Description : { type: "string", editable: true }
                             }
                         }
