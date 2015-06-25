@@ -81,13 +81,35 @@
                     {
                         command: [
                             { name: "edit", id:"comedit" , text: "確認修改" },
-                            { name: "destroy", text: "刪除" }
+                            { name: "destroy", text: "刪除" },
+                            { text: "View Details", click: showDetails }
                         ], width: "250px"
-                        }
-                ]
-            });
+                    }]
 
+            }).data("kendoGrid");
+
+            wnd = $("#details")
+                        .kendoWindow({
+                            title: "Customer Details",
+                            modal: true,
+                            visible: false,
+                            resizable: false,
+                            width: 300
+                        }).data("kendoWindow");
+
+            detailsTemplate = kendo.template($("#template").html());
         });
+
+        function showDetails(e) {
+            e.preventDefault();
+
+            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+            wnd.content(detailsTemplate(dataItem));
+            wnd.center().open();
+        }
+
+        
+
 
         $("#comedit").on("click", function () { 
             $("#EmployeeID").hide;
