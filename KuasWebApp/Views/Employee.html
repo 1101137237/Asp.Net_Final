@@ -121,5 +121,35 @@
             $("#EmployeeID").hide;
         });
     </script>
+    <script type="text/x-kendo-template" id="template">
+        <div id="details-container">
+            <h2>員工姓名: #= Name #</h2>
+            <em>部門: #= Department #</em>
+            <dl>
+                <dt>員工描述: #= Description #</dt>
+                
+            </dl>
+        </div>
+    </script>
+
+    <style type="text/css">
+        #details-container {
+            padding: 10px;
+        }
+
+            #details-container h2 {
+                margin: 0;
+            }
+
+            #details-container em {
+                color: #8c8c8c;
+            }
+
+            #details-container dt {
+                margin: 0;
+                display: inline;
+            }
+    </style>
+
 </body>
 </html>
