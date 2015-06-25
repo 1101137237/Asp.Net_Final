@@ -21,7 +21,7 @@ namespace KuasCore.Dao.Impl
 
         public void AddEmployee(Employee Employee) 
         {
-            string command = @"INSERT INTO Employee (Employee_ID,Employee_Name, Employee_Description) VALUES (@Id, @Name, @Description);";
+            string command = @"INSERT INTO Employee (Employee_Id,Employee_Name, Employee_Description) VALUES (@Id, @Name, @Description);";
 
             IDbParameters parameters = CreateDbParameters();
             parameters.Add("Id", DbType.String).Value = Employee.Id;

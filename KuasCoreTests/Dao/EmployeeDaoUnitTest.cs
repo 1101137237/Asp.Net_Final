@@ -47,9 +47,9 @@ namespace KuasCoreTests.Dao
             Assert.IsNotNull(dbEmployee);
             Assert.AreEqual(Employee.Name, dbEmployee.Name);
 
-            Console.WriteLine("課程編號為 = " + dbEmployee.Id);
-            Console.WriteLine("課程名稱為 = " + dbEmployee.Name);
-            Console.WriteLine("課程描述為 = " + dbEmployee.Description);
+            Console.WriteLine("員工編號為 = " + dbEmployee.Id);
+            Console.WriteLine("員工名稱為 = " + dbEmployee.Name);
+            Console.WriteLine("員工描述為 = " + dbEmployee.Description);
 
             EmployeeDao.DeleteEmployee(dbEmployee);
             dbEmployee = EmployeeDao.GetEmployeeByName(Employee.Name);
