@@ -21,7 +21,7 @@
             var UrlBase = "/";
             $("#grid").kendoGrid({
                 dataSource: {
-                    pageSize: 5,
+                    pageSize: 10,
                     dataType: "jsonp",
                     transport: {
                         read: {
@@ -55,15 +55,15 @@
                         model: {
                             id: "Id",
                             fields: {
-                            Id  : { type: "string",id: "EmployeeID", editable: true, nullable: false },
-                                Name: { type: "string", editable: true, nullable: false },
+                            Id  : { type: "int", editable: false, nullable: false },
+                            Name: { type: "string", validation: { required: true}, editable: true, nullable: false },
                                 Description : { type: "string", editable: true }
                             }
                         }
                     }
 
                 },
-                height: 550,
+                height: 850,
                 sortable: true,
                 scrollable: true,
                 sortable: true,

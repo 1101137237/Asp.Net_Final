@@ -19,6 +19,6 @@ namespace KuasCore.Services
 
         Employee GetEmployeeByName(string name);
 
-        Employee GetEmployeeById(string id);
+        Employee GetEmployeeById(int id);
     }
 }

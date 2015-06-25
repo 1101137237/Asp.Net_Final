@@ -44,8 +44,9 @@ namespace KuasCore.Services.Impl
             return EmployeeDao.GetEmployeeByName(name);
         }
 
-        public Employee GetEmployeeById(string id)
+        public Employee GetEmployeeById(int id)
         {
+           
             return EmployeeDao.GetEmployeeById(id);
         }
     }

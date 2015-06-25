@@ -65,7 +65,7 @@ namespace KuasWebApp.Controllers
         }
 
         [HttpGet]
-        public Employee GetEmployeeById(string id)
+        public Employee GetEmployeeById(int id)
         {
             var Employee = EmployeeService.GetEmployeeById(id);
 
