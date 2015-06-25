@@ -36,6 +36,7 @@ namespace KuasCore.Dao.Impl
             string command = @"UPDATE Employee SET Employee_Id = @Id,Employee_Name = @Name, Employee_Description = @Description WHERE Employee_PKId = @PKId;";
 
             IDbParameters parameters = CreateDbParameters();
+            parameters.Add("PKId", DbType.Int32).Value = Employee.PKId;
             parameters.Add("Id", DbType.String).Value = Employee.Id;
             parameters.Add("Name", DbType.String).Value = Employee.Name;
             parameters.Add("Description", DbType.String).Value = Employee.Description;
@@ -45,10 +46,10 @@ namespace KuasCore.Dao.Impl
 
         public void DeleteEmployee(Employee Employee)
         {
-            string command = @"DELETE FROM Employee WHERE Employee_Id = @Id";
+            string command = @"DELETE FROM Employee WHERE Employee_PKId = @PKId";
 
             IDbParameters parameters = CreateDbParameters();
-            parameters.Add("Id", DbType.String).Value = Employee.Id;
+            parameters.Add("PKId", DbType.Int32).Value = Employee.PKId;
 
             ExecuteNonQuery(command, parameters);
         }
@@ -76,12 +77,12 @@ namespace KuasCore.Dao.Impl
             return null;
         }
 
-        public Employee GetEmployeeById(string id)
+        public Employee GetEmployeeById(int id)
         {
-            string command = @"SELECT * FROM Employee WHERE Employee_ID = @id";
+            string command = @"SELECT * FROM Employee WHERE Employee_PKID = @id";
 
             IDbParameters parameters = CreateDbParameters();
-            parameters.Add("id", DbType.String).Value = id;
+            parameters.Add("id", DbType.Int32).Value = id;
 
             IList<Employee> Employee = ExecuteQueryWithRowMapper(command, parameters);
             if (Employee.Count > 0)
