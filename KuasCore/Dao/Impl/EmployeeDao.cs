@@ -33,7 +33,7 @@ namespace KuasCore.Dao.Impl
 
         public void UpdateEmployee(Employee Employee)
         {
-            string command = @"UPDATE Employee SET Employee_Id = @Id,Employee_Name = @Name, Employee_Description = @Description WHERE Employee_Id = @Id;";
+            string command = @"UPDATE Employee SET Employee_Id = @Id,Employee_Name = @Name, Employee_Description = @Description WHERE Employee_PKId = @PKId;";
 
             IDbParameters parameters = CreateDbParameters();
             parameters.Add("Id", DbType.String).Value = Employee.Id;
