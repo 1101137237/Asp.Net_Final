@@ -68,16 +68,16 @@
                 sortable: true,
                 filterable: true,
                 editable: "inline",
-                toolbar: ["create"],
+                toolbar: [{ name: "create", text:"新增員工資料"}],
                 pageable: {
                     input: true,
                     numeric: false
                 },
                 columns: [
-                    { field: "Id"  , title: "課程編號" , width: "100px" },
-                    { field: "Name", title: "課程名稱", width: "100px" },
-                    { field: "Description", title: "課程描述", width: "160px" },
-                    { command: ["edit", "destroy"], title: "Command", width: "250px" }
+                    { field: "Id"  , title: "員工編號" , width: "100px" },
+                    { field: "Name", title: "員工名稱", width: "100px" },
+                    { field: "Description", title: "員工描述", width: "160px" },
+                    { command: ["edit", "destroy"], title: "其他", width: "250px" }
                 ]
             });
 
