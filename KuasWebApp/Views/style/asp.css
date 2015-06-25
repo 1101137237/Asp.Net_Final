@@ -30,6 +30,10 @@
     background: green;
 }
 
+.k-grid-detail {
+    background: #CCFF99;
+    color: white;
+}
 
 .k-grid-edit {
     background: #5599FF;
