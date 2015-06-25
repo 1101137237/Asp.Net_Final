@@ -1,0 +1,77 @@
+﻿.k-grid th.k-header,
+.k-grid-header {
+    background: white;
+}
+
+    .k-grid th.k-header,
+    .k-grid th.k-header .k-link {
+        color: green;
+    }
+
+/*rows*/
+
+.k-grid-content > table > tbody > tr {
+    background: white;
+}
+
+
+.k-grid-content > table > tbody > .k-alt {
+    background: #DCDCDC;
+}
+
+/*selection*/
+
+.k-grid table tr.k-state-selected {
+    background: #f99;
+    color: #fff;
+}
+
+.k-grid-toolbar {
+    background: green;
+}
+
+
+.k-grid-edit {
+    background: #ffd700;
+    color: white;
+}
+
+.k-grid-delete {
+    background: #ff0000;
+    color: white;
+}
+
+.k-grid-add {
+    background-color: green !important;
+    color: white !important;
+}
+
+    .k-grid-add:hover {
+        background-color: #66DD00 !important;
+    }
+
+.k-grid-pager {
+    background: #DCDCDC;
+    color: black;
+}
+
+.k-icon .k-add {
+    color: #000000 !important;
+}
+
+.k-label {
+    color: black;
+}
+
+.k-pager-nav {
+    border-color: black;
+}
+
+.k-grid {
+    font-family: Microsoft YaHei,Arial;
+    font-size: 18px;
+}
+
+td {
+    text-align: center;
+}

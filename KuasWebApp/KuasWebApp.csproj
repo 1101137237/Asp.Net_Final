@@ -149,7 +149,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Views\Course.html" />
+    <Content Include="Views\Employee.html" />
+    <Content Include="Views\style\asp.css" />
     <Content Include="Views\style\js\jquery.min.js" />
     <Content Include="Views\style\js\kendo.all.min.js" />
     <Content Include="Views\style\kendo.common-material.min.css" />

@@ -1059,7 +1059,7 @@ html .km-pane-wrapper .km-widget,.k-ie .km-pane-wrapper .k-widget,.k-ie .km-pane
     .km-pane-wrapper .k-icon {
         background-image: url('Material/sprite_2x.png');
         background-size: 21.2em 21em;
-    };
+    }
 }
 
 .km-pane-wrapper .k-mobile-list .k-item,.km-pane-wrapper .k-mobile-list .k-edit-field,.km-pane-wrapper .k-mobile-list .k-recur-view>.k-edit-field .k-check {

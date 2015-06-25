@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/kendo.material.min.css" />
     <link rel="stylesheet" href="style/kendo.dataviz.min.css" />
     <link rel="stylesheet" href="style/kendo.dataviz.material.min.css" />
+    <link rel="stylesheet" href="style/asp.css" />
    <script src="style/js/jquery.min.js"></script>
     <script src="style/js/kendo.all.min.js"></script>
 </head>
@@ -24,22 +25,23 @@
                     dataType: "jsonp",
                     transport: {
                         read: {
-                            url: UrlBase+"api/Course",
+                            url: UrlBase+"api/Employee",
                             contentType: "application/json; charset=utf-8",
                             type: "GET"
                         },
                         create: {
-                            url: UrlBase+"api/Course",
+                            url: UrlBase + "api/Employee",
                             contentType: "application/json; charset=utf-8",
                             type: "POST"
                         },
                         update: {
-                            url: UrlBase+"api/Course",
+                           
+                            url: UrlBase + "api/Employee",
                             contentType: "application/json; charset=utf-8",
                             type: "PUT"
                         },
                         destroy: {
-                            url: UrlBase + "api/Course",
+                            url: UrlBase + "api/Employee",
                             contentType: "application/json; charset=utf-8",
                             type: "DELETE"
                         },
@@ -76,7 +78,12 @@
                     { field: "Id"  , title: "員工編號" , width: "100px" },
                     { field: "Name", title: "員工名稱", width: "100px" },
                     { field: "Description", title: "員工描述", width: "160px" },
-                    { command: ["edit", "destroy"], title: "其他", width: "250px" }
+                    {
+                        command: [
+                            { name: "edit",  text: "修改" },
+                            { name: "destroy", text: "刪除" }
+                        ], width: "250px"
+                        }
                 ]
             });
 
