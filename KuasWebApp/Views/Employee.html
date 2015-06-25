@@ -55,7 +55,7 @@
                         model: {
                             id: "Id",
                             fields: {
-                                Id  : { type: "string", editable: true, nullable: false },
+                            Id  : { type: "string",id: "EmployeeID", editable: true, nullable: false },
                                 Name: { type: "string", editable: true, nullable: false },
                                 Description : { type: "string", editable: true }
                             }
@@ -80,13 +80,17 @@
                     { field: "Description", title: "員工描述", width: "160px" },
                     {
                         command: [
-                            { name: "edit",  text: "確認修改" },
+                            { name: "edit", id:"comedit" , text: "確認修改" },
                             { name: "destroy", text: "刪除" }
                         ], width: "250px"
                         }
                 ]
             });
 
+        });
+
+        $("#comedit").on("click", function () { 
+            $("#EmployeeID").hide;
         });
     </script>
 </body>
